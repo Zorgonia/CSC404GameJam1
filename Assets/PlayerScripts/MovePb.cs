@@ -11,8 +11,8 @@ public class MovePb : MonoBehaviour
     private float _playerInput;
     private float _turningInput;
 
-    private const float MovementScale = 3.0f;
-    private const float TurningScale = 1.5f;
+    public const float MovementScale = 3.0f;
+    public const float TurningScale = 1.5f;
     
     // Start is called before the first frame update
     void Start()
