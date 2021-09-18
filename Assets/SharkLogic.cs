@@ -26,6 +26,8 @@ public class SharkLogic : MonoBehaviour
         if (collision.gameObject.name == "Player")
         {
             Debug.Log("Game over");
+            Time.timeScale = 0;
+            
         }
     }
 
