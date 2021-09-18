@@ -16,6 +16,7 @@ public class CameraController : MonoBehaviour
     private Vector3 _offset;
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         _y_rotation = transform.eulerAngles.y;
         _x_rotation = transform.eulerAngles.x;
         _offset = player.position - transform.position;
@@ -23,22 +24,14 @@ public class CameraController : MonoBehaviour
     
     void LateUpdate()
     {
-        _HorizontalInput = Input.GetAxis("Horizontal");
-        _VerticalInput = Input.GetAxis("Vertical");
+        _HorizontalInput = Input.GetAxis("Mouse X");
+        _VerticalInput = Input.GetAxis("Mouse Y");
         if (_HorizontalInput != 0)
-        {
-            _y_rotation += _HorizontalInput * rotSpeed;
-        }
-        else
         {
             _y_rotation += Input.GetAxis("Mouse X") * rotSpeed * 3;
         }
         
         if (_VerticalInput != 0)
-        {
-            _x_rotation += _VerticalInput * rotSpeed;
-        }
-        else
         {
             _x_rotation += Input.GetAxis("Mouse Y") * rotSpeed * 3;
         }
