@@ -19,7 +19,6 @@ public class GenerateLevel : MonoBehaviour
             if (player.position.x % 350f / 350f > 0.5 || player.position.z % 350f / 350f > 0.5)
             {
                 createSection = true;
-                Debug.Log("there");
                 StartCoroutine(GenerateSection());
             }
         }
