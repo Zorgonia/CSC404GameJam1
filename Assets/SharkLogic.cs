@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SharkLogic : MonoBehaviour
 {
-    private float moveSpeed = 1.0f;
+    public float moveSpeed = 1.0f;
     private Transform playerTransform;
     // Start is called before the first frame update
     void Start()
